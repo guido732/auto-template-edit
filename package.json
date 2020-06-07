@@ -1,0 +1,17 @@
+{
+  "name": "firmas-mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "jsdom": "^16.2.2",
+    "prompt-sync": "^4.2.0"
+  }
+}
