@@ -5,8 +5,8 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 // Gets initial file routes
-const dbRoute = getFileRoute("Write database route ");
-const templateRoute = getFileRoute("Write template html file route ");
+const dbRoute = getFileRoute("Write database route: ");
+const templateRoute = getFileRoute("Write template html file route: ");
 // Start Program
 init();
 
