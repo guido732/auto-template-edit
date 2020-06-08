@@ -49,7 +49,7 @@ async function createSignature(route, rowData) {
 function writeOutputFile(fileData, rowData) {
 	const date = new Date();
 	const formattedDate = `${date.getFullYear()}_${date.getMonth() + 1}_${date.getDate()}`;
-	const outputRoute = `export/${formattedDate}_${rowData.Nombre}_${rowData.Apellido}.txt`;
+	const outputRoute = `export/${formattedDate}_${rowData.Nombre}_${rowData.Apellido}.html`;
 	fs.appendFile(outputRoute, fileData, (err) => {
 		if (err) throw err;
 		console.log("File saved...");
