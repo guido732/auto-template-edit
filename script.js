@@ -39,7 +39,12 @@ async function createSignature(route, rowData) {
 		const myTemplateDom = new JSDOM(myTemplate);
 		myTemplateDom.window.document.querySelector("#first-name").innerHTML = rowData.Nombre;
 		myTemplateDom.window.document.querySelector("#last-name").innerHTML = rowData.Apellido;
-		myTemplateDom.window.document.querySelector("#area-role").innerHTML = `${rowData.Area} | ${rowData.Puesto}`;
+		myTemplateDom.window.document.querySelector("#area-role").innerHTML = rowData.Area
+			? `${rowData.Area} | ${rowData.Puesto}`
+			: rowData.Puesto;
+		myTemplateDom.window.document.querySelector("#telephone").innerHTML = rowData.Telefono
+			? `<span style="font-weight: 700;">tel&ensp;</span>// <span >${rowData.Telefono}</span>`
+			: null;
 		const snippet = myTemplateDom.window.document.querySelector("body").innerHTML;
 		return snippet;
 	} catch (error) {
